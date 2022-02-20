@@ -22,7 +22,7 @@ public class MessageController {
     private MessageService messageService;
 
     @PostMapping("/messages")
-    public ResponseEntity<Message> saveUser(@RequestBody MessageRequest request) {
+    public ResponseEntity<Message> saveMessage(@RequestBody MessageRequest request) {
         messageService.saveMessage(request);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
